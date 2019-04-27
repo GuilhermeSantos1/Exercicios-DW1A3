@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title> Formulario </title>
+
+
+    <link rel="stylesheet" href="exercicios3-formulario.css"/>
+</head>
+
+
+<body>
+<div id="interface">
+
+
+                <hgroup>
+                    <h3>Formulario > Contato </h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Guilherme dos santos</h2>
+                    <h3 class="direita">Atualizado em 27/Abril/2019</h3>
+                </hgroup>
+            </header>
+
+
+            <form method="post" id="fContato" action="mailto:guilhermehard81@gmail.com">
+                <fieldset id="usario"><legend>Identificação do Usuário</legend>
+                    <p><label for="cNome"/> Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+                    <p><lable for="cTel"/>  Telefone:  <input type="tel" name="tTel" id="cTel"/></p>
+                    <p><lable for="cCel"/>  Celular:  <input type="tel" name="tCel" id="cCel"/></p>
+                    <p>Senha:<input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+                    <p>E-mail: <input type="email" name="tMail" id="cMail" size="20" maxlength="40"/></p>
+                    <fieldset id="sexo"><legend>Sexo</legend>
+                        <input type="radio" name="tSexo" id="cMasc" checked/><lable for="cMasc">Masculino</lable><br>
+                        <input type="radio" name="tSexo" id="cFem"/><lable for="cFem">Feminino</lable>
+                    </fieldset>
+                    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"/></p>
+
+
+
+
+                        </fieldset>
+
+                <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                    <p><lable for="cRua">Logradouro:</lable> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, av, trav"/></p>
+                    <p><lable for="cNum">Número:</lable><input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+                    <p><lable for="cEst">Estado:</lable>
+                        <select name="tEst" id="cEst">
+                            <optgroup label="Região Sudeste"><option value="RJ"> Rio de Janeiro</option>
+                                <option value="SP" selected > São Paulo</option>
+                                <option value="RS" > Rio Grande do Sul</option>
+                            </optgroup>
+
+                            <optgroup label="Região Sul"></optgroup><option value="PR" > Parana</option>
+                            <option value="MG" > Minas Gerais </option>
+                            <option value="SC" > Santa Catarina </option>
+
+                            </optgroup>
+
+                        </select>
+
+
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    <p><lable for="cUrg">Grau de Urgência:</lable>
+                        Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max</p>
+                    <p><lable for="cMsg">Mensagem:</lable>
+                        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua Mensagem"></textarea></p>
+                </fieldset>
+
+
+
+
+
+                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+            </form>
+
+        </article>
+    </section>
+
+
+</div>
+</body>
+</html>
