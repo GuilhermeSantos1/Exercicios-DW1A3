@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" >
+<head>
+    <meta charset="UTF-8"/>
+
+
+
+
+</head>
+
+<body>
+       <table width="600" cellspacing="4" cellpadding="8" border="0" bgcolor="##0000FF">
+       <script type="text/javascript">
+        function  calcularIMC() {
+          var peso = eval(document.form.peso.value)
+          var alt = eval(document.form.alt.value)
+          var alt2 = alt / 100
+          var altura = (alt2 * alt2)
+          var IMC = peso  / altura
+          var emagre = peso - (altura *  24,9 );
+          var engor = ( altura *  24.9 ) - peso;
+          var concluir
+         
+          document.form.massacor.value=custRound(IMC,1);
+
+        if (document.form.massacor.value >=16 && document.form.massacor.value <= 16.9)
+         document.form.comentario.value = "Muito abaixo do peso";
+         document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  engor;
+        if (document.form.massacor.value >=17 && document.form.massacor.value <=18.4)
+        document.form.comentario.value = "Abaixo do peso";
+        document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  engor;
+        if (document.form.massacor.value >=18.5 && document.form.massacor.value<=24.9)
+        document.form.comentario.value = "Peso Normal";
+        document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  emagre;
+        if (document.form.massacor.value >=25 && document.form.massacor.value <=29.9)
+        document.form.comentario.value = "Acima do peso";
+        document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  emagre;
+        if (document.form.massacor.value >=30 && document.form.massacor.value <=34.9)
+        document.form.comentario.value = "Obesidade Grau I";
+        document.form.comentario.value=  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  emagre;
+        if (document.form.massacor.value >=35 && document.form.massacor.value <=40)
+        document.form.comentario.value = "Obesidade Grau II";
+        document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  emagre;
+        if (document.form.massacor.value >40)
+        document.form.comentario.value = "Obesidade Grau III";
+        document.form.comentario.value =  " Sinto muito, mas o seu IMC é de "  +  IMC +  " kg / m 2, por que está acima do peso e deveria emagrecer no mínimo "  +  emagre;
+        }
+        function custRound(x,places) {
+          return (Math.round(x*Math.pow(10,places)))/Math.pow(10,places)
+        }
+        
+        
+       
+
+        </script>
+
+
+      <tr> 
+      <td><font color="#FFFFFF" face="arial"> 
+     <b> <center> IMC </center> </b> 
+     </font></td> 
+     </tr>
+      <tr> 
+      <td bgcolor="#32CD99"> 
+         <font face="arial"> 
+
+           <div align="center">
+             <form  name="form" id="form">
+             Peso (em Kg)
+          <br>
+        <input type="Text" name="peso" size="15"> 
+         <br>
+         Altura (em Cm)
+        <br>
+      <input type="Text" name="alt" size="15"> 
+     <br>
+        <br>
+  <input type="button" style="Padding: 8pt" value="Calcular IMC" onClick="calcularIMC()" name="button">
+     <input type="reset" style="Padding: 8pt" value="Limpar Valores">
+    
+      <br>
+      <br>
+             IMC
+         <br>
+        <input type="Text" name="massacor" id="massacor" size="10">
+         <br>
+
+         Avaliacao do IMC
+<br> 
+<input type="Text" name="comentario" id="comentario" size="60">
+      
+<br>
+<br>
+
+
+
+
+     </form>
+</div>
+ </table>
+
+
+<br>
+<br>
+
+<table  border = "tab">
+    <tr>
+        <th>Classificação</th>
+        <th>IMC </th>
+        <th>O que pode acontecer</th>
+    </tr>
+    <tr>
+        <td>Muito abaixo do peso</td>
+        <td>16 a 16,9 kg/m2</td>
+        <td>Queda de cabelo,infertilidade,ausência menstrual</td>
+    </tr>
+    <tr>
+       
+        <td>Abaixo do Peso</td>
+        <td>17 a 18,4 kg/m2</td>
+        <td>Fadiga,stress e ansiedade</td>
+    </tr>
+    <tr>
+      
+        <td>Peso Normal</td>
+        <td>18,5 a 24,9 kg/m2</td>
+        <td>Menor risco de doenças cardiacas e vasculares</td>
+    </tr>
+    <tr> 
+      
+        <td>Acima do Peso</td>
+        <td>25 a 29,9  kg/m2</td>
+        <td>Fadiga, Má circulação, varizes</td>
+    </tr>
+    <tr>
+       
+        <td>Obesidade Grau I</td>
+        <td>30 a 34,9 kg/m2</td>
+        <td>Diabetes,angina,infarto,aterosclerose</td>
+    </tr>
+    <tr>
+        
+        <td>Obesidade Grau II</td>
+        <td>35 a 40 kg/m2</td>
+        <td>Apneia do sono, falta de ar</td>
+    </tr>
+    <tr>
+        
+        <td>Obesidade Grau III</td>
+        <td>Maior que 40 kg/m2</td>
+        <td>Refluxo,dificuldade para se mover,escaras,diabetes,infarto,AVC</td>
+    </tr>
+</table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
